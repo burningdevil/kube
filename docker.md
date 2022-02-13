@@ -1,0 +1,86 @@
+# Docker
+
+## Docker Commands
+
+### run
+
+`docker run [OPTIONS] IMAGE [COMMAND] [ARG...]`
+
+Foreground
+
+`docker run nginx`
+
+Background
+
+`docker run --detach --publish-all nginx`
+
+publish
+
+`docker run -d -p 80:80 tutum/wordpress`
+
+--detach/-d: background
+
+--publish/-p: publish
+
+--publish-all: publish to a random port
+
+### ps
+
+`docker ps`
+
+### iamges
+
+`docker images`
+
+### stop
+
+`docker stop <id_of_ps>`
+
+### Docker build
+
+`docker build -t <name> -f Dockerfile`
+
+-t: name of docker imag
+
+-f: docker file location
+
+### Docker push and pull
+
+`docker push my-registery.com/<name>`
+
+`docker pull my-registery.com/<name>`
+
+## Images
+
+### Dockerfile
+
+The docker build command builds an image from a Dockerfile and a context. The build’s context is the set of files at a specified location PATH or URL. The PATH is a directory on your local filesystem. The URL is a Git repository location.
+
+```Dockerfile
+# Every container image starts with a base image.
+# This could be your favorite linux distribution
+FROM ubuntu:20.04 
+
+# Run commands to add software and libraries to your image
+# Here we install python3 and the pip package manager
+RUN apt-get update && \
+    apt-get -y install python3 python3-pip 
+
+# The copy command can be used to copy your code to the image
+# Here we copy a script called "my-app.py" to the containers filesystem
+COPY my-app.py /app/ 
+
+# Defines the workdir in which the application runs
+# From this point on everything will be executed in /app
+WORKDIR /app
+
+# The process that should be started when the container runs
+# In this case we start our python app "my-app.py"
+CMD ["python3","my-app.py"]
+```
+
+### Build context
+
+When you issue a docker build command, the current working directory is called the build context.
+
+### Exclude with .dockignore
