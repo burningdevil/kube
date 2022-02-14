@@ -1,9 +1,10 @@
 # Softwares
 
 ## CNCF projects
+
 - Containerd  
 container runtime
-- CoreDNS, etcd    
+- CoreDNS, etcd  
 Coordination & Service Discovery
 - envoy  
 Service Proxy
@@ -27,3 +28,98 @@ Monitoring
 Clould Native Storage
 - TIKV, Vitess  
 Database
+
+## Containers
+
+### building images
+
+buildah or kaniko
+
+### full alternatives to docker
+
+podman, docker
+
+## docker Registry
+
+Docker Hub(docker) and Quay(podman)
+
+## Service discovery
+
+### Key-Value-Store
+
+Using datastore to store information about services. It's a service registry indeed.  
+
+- etcd
+- Consul
+- Apache Zookeeper
+
+## Service Mesh
+
+### proxy
+
+second container in application. The software that you use to manage network traffic is called a proxy. Sit between client and server and can modify or filter network traffic.
+
+- nginx
+- haproxy
+- envoy
+
+### service mesh
+
+a service mesh adds a proxy server to every container that you have in your architecture. When a service mesh is used, applications don’t talk to each other directly, but the traffic is routed through the proxies instead.
+
+- istio
+- linkered
+
+## Kube clusters
+
+setting up test cluster:
+minikube, kind, microk8s
+
+production-grade cluster:
+kubeadm, kops, kubespray
+
+venders packing kube into distribution:
+rancher, k3s, openshift, vmware tanzu
+
+Cloud provier:
+Amazon(EKS), Google(GKE), Microsoft(AKS), DigitalOcean(DOKS)
+
+
+## CI/CD Tools
+
+- Spinnaker
+- GitLab
+- Jenkins
+- Jenkins X
+- Token CD
+- Argo
+
+## GitOPs
+
+GitOps takes the idea of Git as the single source of truth a step further and integrates the provisioning and change process of infrastructure with version control operations.
+
+GitOps framework use pull-based approach.
+
+- Flux(built with GitOPs toolkit)
+- ArgoCD(kubernetes controller)
+
+## Logs
+
+### ship and store Logs
+
+fluentd and filebeat
+
+### store logs
+
+OpenSearch or Granfana Loki
+
+## Metrics
+
+- Granfana: most used companion for Prometheus, build dashboards from collected metrics.
+- Alertmanager: alertmanager can send a notification to email, chat tool when a alert from Prometheus fires.
+
+## Tracing
+
+### store and analyzed
+
+Jaeger
