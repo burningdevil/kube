@@ -72,18 +72,106 @@ a service mesh adds a proxy server to every container that you have in your arch
 
 ## Kube clusters
 
-setting up test cluster:
-minikube, kind, microk8s
+### setting up test cluster
 
-production-grade cluster:
-kubeadm, kops, kubespray
+- minikube
+- kind
+- microk8s
 
-venders packing kube into distribution:
-rancher, k3s, openshift, vmware tanzu
+### production-grade cluster
 
-Cloud provier:
-Amazon(EKS), Google(GKE), Microsoft(AKS), DigitalOcean(DOKS)
+- kubeadm
+- kops
+- kubespray
 
+### venders packing kube into distribution
+
+- rancher
+- k3s
+- openshift(red hat)
+- vmware tanzu
+
+### Cloud provier
+
+- Amazon(EKS)
+- Google(GKE)
+- Microsoft(AKS)
+- DigitalOcean(DOKS)
+
+## KubeAPI Aceess Control
+
+### Authentication
+
+Service Accounts
+
+### Authorization
+
+Role Based Access Control
+
+### Admission Control
+
+Open Policy Agent
+
+## ContainerD (container runtime)
+
+replacement of ContainerD/CRI-O
+
+- gviosr  
+google, runsc, security
+
+- kata containers  
+secure, virtual machine, behaves as container
+
+## Network
+
+To implement networking, you can choose from a variety of network vendors like:
+
+- Project Calico
+- Weave
+- Cilium
+
+## Working with Kubernetes
+
+Other tools for interacting with Kubernetes:
+
+- Kubernetes/dashboard
+- derailed/k9s
+- Lens
+- VMware Tanzu Octant
+
+creation of templates and the packaging of Kubernetes objects. Helm is a package manager for Kubernetes, which allows easier updates and interaction with objects.
+
+- Helm
+
+## Storage
+
+### cloud block storage
+
+- Amazon EBS
+- Google Persistent Disks
+- Azure Disk Storage
+
+### consume from storage systems
+
+- Ceph
+- GlusterFS
+- traditional system NFS
+
+### Operate storgae in kube
+
+- Rook
+
+## Autoscaling
+
+### horizontal scale
+
+Based on metrics addon
+
+- metrics server
+
+Events Driven
+
+- KEDA
 
 ## CI/CD Tools
 
@@ -124,8 +212,6 @@ OpenSearch or Granfana Loki
 
 Jaeger
 
-
 ## gPRC
 
 gRPC is a modern open source high performance Remote Procedure Call (RPC) framework that can run in any environment.
-
