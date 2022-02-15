@@ -123,3 +123,9 @@ OpenSearch or Granfana Loki
 ### store and analyzed
 
 Jaeger
+
+
+## gPRC
+
+gRPC is a modern open source high performance Remote Procedure Call (RPC) framework that can run in any environment.
+
