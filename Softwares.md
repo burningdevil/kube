@@ -20,8 +20,8 @@ Tracing
 Scheduling & Orchestration
 - LINKERD  
 Service Mesh
-- Open Policy Agent， TUF
-Security & Compliance
+- Open Policy Agent  
+TUF Security & Compliance
 - Promethus  
 Monitoring
 - Rook  
