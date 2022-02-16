@@ -116,7 +116,7 @@ Open Policy Agent
 
 replacement of ContainerD/CRI-O
 
-- gviosr  
+- gvisor  
 google, runsc, security
 
 - kata containers  
