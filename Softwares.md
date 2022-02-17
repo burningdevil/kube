@@ -53,6 +53,14 @@ Using datastore to store information about services. It's a service registry ind
 - Consul
 - Apache Zookeeper
 
+## Network in pods/Network policy provider
+
+To implement networking between pods, you can choose from a variety of network vendors like:
+
+- Project Calico
+- Weave
+- Cilium
+
 ## Service Mesh
 
 ### proxy
@@ -62,14 +70,6 @@ second container in application. The software that you use to manage network tra
 - nginx
 - haproxy
 - envoy
-
-### Network in pods/Network policy provider
-
-To implement networking between pods, you can choose from a variety of network vendors like:
-
-- Project Calico
-- Weave
-- Cilium
 
 ### service mesh
 
@@ -205,6 +205,11 @@ OpenSearch or Granfana Loki
 
 - Granfana: most used companion for Prometheus, build dashboards from collected metrics.
 - Alertmanager: alertmanager can send a notification to email, chat tool when a alert from Prometheus fires.
+
+### Prometheus at scale (storage of metrics)
+
+- Thanos
+- Cortex
 
 ## Tracing
 
