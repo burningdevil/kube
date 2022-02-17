@@ -63,6 +63,14 @@ second container in application. The software that you use to manage network tra
 - haproxy
 - envoy
 
+### Network in pods/Network policy provider
+
+To implement networking between pods, you can choose from a variety of network vendors like:
+
+- Project Calico
+- Weave
+- Cilium
+
 ### service mesh
 
 a service mesh adds a proxy server to every container that you have in your architecture. When a service mesh is used, applications don’t talk to each other directly, but the traffic is routed through the proxies instead.
@@ -121,14 +129,6 @@ google, runsc, security
 
 - kata containers  
 secure, virtual machine, behaves as container
-
-## Network
-
-To implement networking, you can choose from a variety of network vendors like:
-
-- Project Calico
-- Weave
-- Cilium
 
 ## Working with Kubernetes
 
