@@ -63,7 +63,7 @@ used for combination with label.
 `kubectl exec <pod name> -- env`  
 get environment variables
 
-`kubectl exec --ti <pod name> -- bash`  
+`kubectl exec -ti <pod name> -- bash`  
 start bash in target pod
 
 ### service
