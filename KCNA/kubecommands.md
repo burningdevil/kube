@@ -12,7 +12,7 @@ init control plane
 
 `kubeadm join <ip> --token <token>`
 
-worked node join kube
+worker node join kube
 
 ## kubectl
 
