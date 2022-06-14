@@ -1,0 +1,14 @@
+Find the Pod with the highest priority in Namespace management and delete it.
+
+
+Tip
+
+Priority is an attribute in the Pod specification.
+
+k -n management get pod -o yaml
+
+Solution
+
+k -n management get pod -o yaml | grep -i priority -B 20
+
+k -n management delete pod sprinter

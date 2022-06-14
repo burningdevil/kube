@@ -23,6 +23,8 @@ Node affinity is a property of Pods that attracts them to a set of nodes (either
 
 ### command
 
+node.spec.taints
+
 ``` bash
 # format
 kubectl taint nodes node_name key=value:effect

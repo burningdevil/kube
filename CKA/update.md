@@ -12,8 +12,9 @@ The maximum number of nodes with an existing available DaemonSet pod that can ha
 * updateStrategy.rollingUpdate.maxUnavailable  
 The maximum number of DaemonSet pods that can be unavailable during the update.
 
-
 ```bash
-kubectl set image ds ds-name container-name=image-url
+kubectl set image ds ds-name container-name=image-url --record
+kubectl rollout history ds ds-name
+kubectl rollout undo ds ds-name
+kubectl rollout undo ds ds-name --to-version=xx
 ```
-
