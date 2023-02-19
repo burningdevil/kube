@@ -23,3 +23,13 @@ kubectl top pod -A --sort-by=cpu
 # get cidr, grep controller-manager process 
 ps -aux  | grep -i cidr
 ```
+
+systemd location: (service/process has it)
+/etc/systemd/system
+
+By default the kubelet looks into /etc/cni/net.d to discover the CNI plugins. This will be the same on every master and worker nodes.
+
+systemctl restart kubelet
+systemctl status kubelet
+journalctl -u kubelet
+vim /etc/systemd/system/kubelet.service.d/10-kubeadm.conf

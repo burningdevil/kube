@@ -27,6 +27,11 @@ sudo apt/yum update
 # view available packages
 ```
 
+```bash
+# with label filter
+k get pods -n project-snake -L app
+```
+
 ## use jq in vim
 
 `
@@ -38,3 +43,7 @@ or
 `
 %!python3 -m json.tool
 `
+
+ k -n project-snake exec backend-0 -- curl -s 10.44.0.25:1111
+
+ sudo kubeadm config print init-defaults

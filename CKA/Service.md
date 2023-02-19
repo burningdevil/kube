@@ -29,4 +29,3 @@ kubectl proxy
 # get resource from API
 curl localhost:8001/api/v1/namespaces/default/services/nginx
 ```
-
