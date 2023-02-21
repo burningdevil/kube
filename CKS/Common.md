@@ -9,4 +9,5 @@
     - ps -elf | grep name
     - systemctl status name
     - /etc/*.d/
-    
+- container share a same pid `docker run --name app2 --pid=container:app1 -d nginx:alpine sleep infinity`
+- disable mounting of serviceAccount token: ``
